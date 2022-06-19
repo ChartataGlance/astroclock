@@ -1,0 +1,153 @@
+/** @format */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+	background-color: #000000;
+	background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,255,223,0.5) 56%, rgba(255,255,100,1) 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+   
+}
+
+.clock {
+	width: 83.3vw;
+	height: 83.3vw;
+	background: rgb(0,0,0);
+   background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,255,223,0.5) 56%, rgba(255,255,100,1) 100%);
+	border-radius: 0%;
+	border: 1px solid black;
+	position: relative;
+	-webkit-box-shadow: 7px 7px 2px -5.5px #ddd;
+	-moz-box-shadow: 7px 7px 2px -5.5px #ddd;
+	box-shadow: 7px 7px 2px -5.5px #ddd;
+	box-shadow: inset 4px 4px 6px -1px rgba(2, 1, 1, 0.2),
+		inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+		-0.5px -0.5px 0px rgba(255, 255, 255, 1),
+		0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.01);
+}
+.start{
+   width: 33.3%;
+   height: 100%;
+   position: absolute;
+   
+   z-index: 9;
+
+}
+.two{
+   width: 66.6%;
+   height: 50%;
+   position: absolute;
+   
+   z-index: 9;
+   right: 0;
+   border: 2px solid red;
+
+}
+.three{
+   width: 66.6%;
+   height: 50%;
+   position: absolute;
+   
+   z-index: 9;
+   right: 0;
+   bottom: 0;
+   border: 2px solid red;
+
+}
+
+
+
+
+.clock .number {
+	--rotation: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+   color: rgb(12, 74, 105);
+	background-color: #2172a000;
+	transform: rotate(var(--rotation));
+	font-size: 1.5rem;
+}
+
+
+
+.clock .number1 { --rotation: -75deg}
+.clock .number2 { --rotation: -60deg}
+.clock .number3 { --rotation: -45deg}
+.clock .number4 { --rotation: -30deg}
+.clock .number5 { --rotation: -15deg}
+.clock .number6 { --rotation: -360deg}
+.clock .number7 { --rotation: -345deg}
+.clock .number8 { --rotation: -330deg}
+.clock .number9 { --rotation: -315deg}
+.clock .number10 { --rotation: -300deg}
+.clock .number11 { --rotation: -285deg}
+.clock .number12 { --rotation: -270deg}
+.clock .number13 { --rotation: -255deg}
+.clock .number14 { --rotation: -240deg}
+.clock .number15 { --rotation: -225deg}
+.clock .number16 { --rotation: -210deg}
+.clock .number17 { --rotation: -195deg}
+.clock .number18 { --rotation: -180deg}
+.clock .number19 { --rotation: -165deg}
+.clock .number20 { --rotation: -150deg}
+.clock .number21 { --rotation: -135deg}
+.clock .number22 { --rotation: -120deg}
+.clock .number23 { --rotation: -105deg}
+.clock .number24 { --rotation: -90deg}
+
+
+
+.clock .hand {
+	--rotation: -90;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	background-color: cornflowerblue;
+	transform-origin: bottom;
+	border: 1px solid white;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	z-index: 10;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+	content: "";
+	position: absolute;
+	background-color: black;
+	z-index: 11;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.clock .hand.second {
+	width: 3px;
+	height: 45%;
+	background-color: red;
+}
+.clock .hand.minute {
+	width: 7px;
+	height: 40%;
+	background-color: black;
+}
+.clock .hand.hour {
+	width: 12px;
+	height: 35%;
+	background-color: black;
+}
