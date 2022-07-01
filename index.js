@@ -13,7 +13,7 @@ function setClock() {
    const secondsRatio = currentDate.getUTCSeconds() / 60 ;
    const minutesRatio = (secondsRatio + currentDate.getUTCMinutes()) / 60;
    const hoursRatio   = (minutesRatio + currentDate.getUTCHours()) /24 ;
-
+   
  setRotation(secondHand, secondsRatio)
  setRotation(minuteHand , minutesRatio)
  setRotation(hourHand, hoursRatio)
